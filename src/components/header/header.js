@@ -1,26 +1,19 @@
 import React from "react";
 import wompi from "../../Images/logo/wompiLogo.png"
 import './header.css'
+import { Link } from "react-router-dom";
 export default function Header () {
     return (
         <header className="header_market">
-            <a href="#" className="list">
+            <Link to="/" className="list">
                 <div className="logo">
                     <img src={wompi} width='150'></img>
                 </div>
-            </a>
-             <ul className="header_List">
-                <li className="header_buttons">
-                    <a href="#" className="list">Productos</a>
-                </li>
-             </ul>
-             <div className="shoppingCart">
+            </Link>
+             <div className="shoppingCartIcon">
                 <box-icon name="cart"></box-icon>
                 <span className="item_total">0</span>
              </div>
-
         </header>
     )
-
-    
 }
